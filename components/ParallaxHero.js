@@ -77,11 +77,14 @@ const ParallaxHero = () => {
             </Link>
             <Link href="/ai-website-builder" passHref>
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255,255,255,0.3)" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255,255,255,0.5)" }}
                 whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
                 className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-medium hover:bg-white/10 transition-all duration-300 cursor-pointer"
               >
-                Learn More
+                AI WEBSITE BUILDER
               </motion.button>
             </Link>
           </motion.div>

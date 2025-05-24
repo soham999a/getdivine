@@ -100,17 +100,23 @@ const Navbar = () => {
               >
                 {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
               </motion.button>
-              <motion.button
-                whileHover={{ 
-                  scale: 1.05, 
+              <motion.div
+                whileHover={{
+                  scale: 1.05,
                   boxShadow: "0 0 20px rgba(255,255,255,0.1)",
                   y: -2
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-darkTheme-primary to-darkTheme-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:from-darkTheme-primary/90 hover:to-darkTheme-secondary/90 transition-all duration-300"
               >
-                Get Started
-              </motion.button>
+                <a
+                  href="https://wa.me/917477755729"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-darkTheme-primary to-darkTheme-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:from-darkTheme-primary/90 hover:to-darkTheme-secondary/90 transition-all duration-300 inline-block"
+                >
+                  Get Started
+                </a>
+              </motion.div>
             </div>
           </div>
 
@@ -204,13 +210,19 @@ const Navbar = () => {
               >
                 {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
               </motion.button>
-              <motion.button
+              <motion.div
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full mt-4 bg-gradient-to-r from-darkTheme-primary to-darkTheme-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:from-darkTheme-primary/90 hover:to-darkTheme-secondary/90 transition-all duration-300"
               >
-                Get Started
-              </motion.button>
+                <a
+                  href="https://wa.me/917477755729"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full mt-4 bg-gradient-to-r from-darkTheme-primary to-darkTheme-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:from-darkTheme-primary/90 hover:to-darkTheme-secondary/90 transition-all duration-300 text-center block"
+                >
+                  Get Started
+                </a>
+              </motion.div>
             </div>
           </motion.div>
         )}
