@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const ParallaxHero = () => {
   const ref = useRef(null);
@@ -65,13 +66,15 @@ const ParallaxHero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255,255,255,0.3)" }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-white text-primary-600 rounded-lg font-medium shadow-lg hover:bg-primary-50 transition-all duration-300"
-            >
-              Get Started
-            </motion.button>
+            <Link href="/contact" passHref>
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255,255,255,0.3)" }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-white text-primary-600 rounded-lg font-medium shadow-lg hover:bg-primary-50 transition-all duration-300 cursor-pointer"
+              >
+                Get Started
+              </motion.button>
+            </Link>
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255,255,255,0.3)" }}
               whileTap={{ scale: 0.95 }}
