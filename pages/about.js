@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -233,14 +234,15 @@ export default function AboutPage() {
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                 Let's create something amazing for your business.
               </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => window.location.href = '/contact'}
-                className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-medium shadow-lg hover:bg-indigo-700 transition-colors"
-              >
-                Get in Touch
-              </motion.button>
+              <Link href="/contact" passHref>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-medium shadow-lg hover:bg-indigo-700 transition-colors cursor-pointer"
+                >
+                  Get in Touch
+                </motion.button>
+              </Link>
             </motion.div>
           </div>
         </section>
